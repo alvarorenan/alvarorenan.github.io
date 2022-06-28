@@ -12,6 +12,10 @@
   justify-content: center;
   font-family: courier, arial, helvetica;
   box-shadow: 10px 5px 25px black;
+  background-image: url("http://pa1.narvii.com/7535/54c7bd8ace797ff0374ef8d0e56f31b420e6c20dr1-888-497_00.gif");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
 }
 
 .invert {
