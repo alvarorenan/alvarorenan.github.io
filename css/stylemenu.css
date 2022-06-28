@@ -1,23 +1,20 @@
 .container {
-  position: absolute;
-  background-color: black;
-  left: 50%;
+  position: fixed;
+  border: 1px solid black;
+  border-radius: 50px;
+  position: fixed;
   top: 50%;
+  left: 50%;
   width: 50%;
-  height: 40%;
-  margin-left: -25%;
-  /* -1/2 width */
-  margin-top: -20%;
-  /* -1/2 height */
-  }
-  
-  .child {
-    width: 50px;
-    height: 50px;
-    /* Center vertically and horizontally */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -25px 0 0 -25px; /* Apply negative top and left margins to truly center the element */
-  }
-  
+  height: 80%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  justify-content: center;
+  font-family: courier, arial, helvetica;
+  box-shadow: 10px 5px 25px black;
+}
+
+.invert {
+  transform: scaleX(-1);
+}
+/* REFER: https://www.codegrepper.com/code-examples/css/how+to+center+div+in+body+css */
