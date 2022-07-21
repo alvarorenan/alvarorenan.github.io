@@ -1,5 +1,5 @@
 function instrucoes() {
     var instrucoes = document.getElementById("instrucoes");
-    alert("APERTE O BOTÃO 'INICIAR' PARA COMEÇAR O JOGO");
+    alert("PRESSIONE QUALQUER TECLA DO TECLADO PARA FAZER O BONECO PULAR\nO OBJETIVO É NAO SER ATINGIDO PELO MORCEGO\nO MORCEGO POSSUI HABILIDADE DE TELEPORTE, QUANDO ELE VAI UTILIZAR SURGE UMA AURA VERMELHA AO REDOR DELE. PRESTE ATENÇÃO!.");
     instrucoes.style.display = "block";
 }
