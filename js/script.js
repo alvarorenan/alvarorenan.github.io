@@ -27,7 +27,7 @@ const verif = setInterval(() => {
         runner.style.animation = 'none';
         runner.style.bottom = `${runnerPosition}px`;
 
-        var randomDie = getRandomInt(1,3);
+        var randomDie = getRandomIntInclusive(1,2);
 
         runner.src = `./img/zenitsudie${randomDie}.gif`;
         runner.style.width = '122px';
@@ -41,10 +41,12 @@ const verif = setInterval(() => {
 
 }, 10);
 
-function getRandomInt(min, max) {
+
+
+function getRandomIntInclusive(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min)) + min;
+    return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
 const scoreCount = setInterval(() => {
