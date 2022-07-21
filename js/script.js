@@ -27,7 +27,9 @@ const verif = setInterval(() => {
         runner.style.animation = 'none';
         runner.style.bottom = `${runnerPosition}px`;
 
-        runner.src = './img/zenitsudie2.gif';
+        var randomDie = getRandomInt(1,3);
+
+        runner.src = `./img/zenitsudie${randomDie}.gif`;
         runner.style.width = '122px';
 
         scoreGameOver.innerHTML = scoreValue;
@@ -39,10 +41,15 @@ const verif = setInterval(() => {
 
 }, 10);
 
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
+
 const scoreCount = setInterval(() => {
     scoreValue = `${parseInt(score.innerHTML) + 1}`;
     score.innerHTML = parseFloat(scoreValue);
-    
     if (scoreValue >= 3) {
         enemy.style.border = '3px solid red';
         enemy.style.borderRadius = '50%';
@@ -57,6 +64,7 @@ const scoreCount = setInterval(() => {
                     enemy.style.border = 'none';
                     enemy.style["-webkit-animation-duration"] = "1s";
                     enemy.style.right = '-100%';
+                    score.style.color = 'red';
                     if (scoreValue >=14){
                         enemy.style.border = '3px solid red';
                         enemy.style.borderRadius = '50%';
@@ -93,7 +101,8 @@ const scoreCount = setInterval(() => {
 }, 650);
 
 
-document.addEventListener('keydown', jump);
+document.addEventListener('mousedown', jump);
+
 
 
 
